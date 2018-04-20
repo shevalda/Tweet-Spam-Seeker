@@ -40,7 +40,12 @@
             fclose($fp);
             echo "Input user berhasil di-export ke user_input.json";
         }
+
+        require 'api.php';
         
+        // menjalankan program kmp dan boyce-moore
+        exec('python test.py');
+
     ?>
 
 </body>
