@@ -1,4 +1,5 @@
 import sys
+import time
 sys.path.append('tools/algorithm')
 # sys.path.append('tools/json')
 
@@ -6,6 +7,8 @@ import json
 import re
 from kmp import kmp_strmat
 from BoyerMoore import BMSearch
+
+
 
 def chooser(mode,patt,tweet) :
     if (mode == "kmp") :
@@ -29,6 +32,7 @@ if __name__ == "__main__" :
         patt = howto['keyword'].lower() 
     else :
         patt = ".*" + howto['keyword'] + ".*"
+    start_time = time.time()
     for a in range(len(data)) :
         if (mode != "regex") :
             tweet = data[a]['text'].lower()
@@ -42,9 +46,9 @@ if __name__ == "__main__" :
         ResObject['username'] = data[a]['user']['screen_name']
         ResObject['name'] = data[a]['user']['name']
         tarr.append(ResObject)
-    # print(tarr)
+    output = dict()
+    output['runtime'] = time.time() - start_time
+    output['tweets'] = tarr
     res_file = open("tools/json/final_result.json","w")
-    json.dump(tarr, res_file)
+    json.dump(output, res_file)
     res_file.close()
-            
-
