@@ -50,7 +50,7 @@
             fwrite($fp, json_encode($data));
             fclose($fp);
 
-            require "tools/twitter_api.php";
+            // require "tools/twitter_api.php";
 
             // menjalankan program kmp dan boyce-moore
             exec('python tools/main.py');

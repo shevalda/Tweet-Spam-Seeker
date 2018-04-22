@@ -28,7 +28,7 @@ def generateSuffixShift(key):
     return skipList
     
 # Algoritma pencarian
-def BMSearch(text, pattern):
+def BMSearch(pattern, text):
     goodSuffix = generateSuffixShift(pattern)
     badChar = generateBadCharShift(pattern)
     i = 0
@@ -45,4 +45,5 @@ def BMSearch(text, pattern):
                 i += goodSuffixShift
         else:
             return i
+
     return -1
