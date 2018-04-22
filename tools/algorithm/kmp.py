@@ -21,9 +21,3 @@ def kmp_strmat(pat,text) :
                 return q
 
     return -1
-
-if __name__ == "__main__" :
-    str = "Silaturahmi Penyuluh Agama se-Jawa Tengah di Lapangan Pancasila, Simpang Lima, Semarang. Negara memberikan perlindungan dalam berkeyakinan dan agama memberikan panduan ilahiah bagi masyarakat dalam berperilaku dan bermasyarakat -Jkw"
-    ptr = "yudakayu"
-    Q = kmp_strmat(ptr, str)
-    print(Q)

@@ -19,12 +19,9 @@
 
     // writing to JSON file
     if ($connection->getLastHttpCode() == 200) {
-        $fp = fopen('json\result_api.json', 'w');
+        $fp = fopen('tools\json\result_api.json', 'w');
         fwrite($fp, json_encode($tweets));
         fclose($fp);
-        echo "koneksi berhasil. hasil telah ditulis ke result_api.json";
-    } else {
-        echo "koneksi tidak berhasil. coba lagi.";
     }
 
 ?>

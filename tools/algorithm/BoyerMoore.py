@@ -46,10 +46,3 @@ def BMSearch(text, pattern):
         else:
             return i
     return -1
-
-# Program Utama 
-if __name__ == "__main__":
-    text = "Tubes tiada henti-hentinya"
-    pattern = "tinya"
-    print ("Text masukan adalah: ", text, ".")
-    print ("Text yang dicari adalah: ", pattern, BMSearch(text, pattern))
