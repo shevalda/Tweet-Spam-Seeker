@@ -13,7 +13,12 @@ def chooser(mode,patt,tweet) :
     elif (mode == "bm") :
         return (BMSearch(patt, tweet) != -1)
     elif (mode == "regex") :
-        return (re.match(patt,tweet))
+        rese = re.search(patt,tweet,re.I)
+        if (rese == None) :
+            fl = False
+        else :
+            fl = True
+        return fl    
 
 if __name__ == "__main__" :
     data = json.load(open('tools/json/result_api.json'))
@@ -23,10 +28,14 @@ if __name__ == "__main__" :
     if (mode != "regex") :
         patt = howto['keyword'].lower() 
     else :
-        patt = howto['keyword']
+        patt = ".*" + howto['keyword'] + ".*"
     for a in range(len(data)) :
-        tweet = data[a]['text'].lower()
-        isSpam = chooser(mode,patt,tweet)
+        if (mode != "regex") :
+            tweet = data[a]['text'].lower()
+            isSpam = chooser(mode,patt,tweet)
+        else :
+            tweet = data[a]['text']
+            isSpam = chooser(mode,patt,tweet)
         ResObject = dict()
         ResObject['spam'] = isSpam
         ResObject['text'] = data[a]['text']
