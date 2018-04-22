@@ -99,7 +99,7 @@
             fclose($fp);
 
             // memanggil API Twitter
-//			require "tools/twitter_api.php";
+			require "tools/twitter_api.php";
 
             // menjalankan program kmp dan boyce-moore
             exec('python tools/main.py');
