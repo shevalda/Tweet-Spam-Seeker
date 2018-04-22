@@ -1,1 +1,121 @@
-/* file css */
+body {
+    background-color: black;
+}
+
+nav {
+    padding: 20px;
+    height: 10%;
+}
+
+form {
+    text-align: center;
+    background-color: lightblue;
+    padding: 50px 10px;
+    border-radius: 5px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    padding-left: 20px;
+    border: none;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.navbar-brand {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.user-input {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.btn-form {
+    width: 38%;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.output {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.result-output {
+    font-weight: bold;
+    font-size: 22.5px;
+}
+
+.runtime {
+    font-size: 20px;
+}
+
+.tweet {
+    padding: 20px 30px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.spam-tweet {
+    background-color: darkorange;
+    color: white;
+}
+
+.not-spam-tweet {
+    background-color: lightgray;
+    /*color: white;*/
+}
+
+.tweet-text {
+    font-size: 25px;
+}
+
+.twitter-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.twitter-username {
+    font-style: italic;
+}
+
+.about {
+    margin-top: 7.5%;
+    font-size: 20px;
+}
+
+.contact {
+    margin-top: 7.5%;
+    text-align: center;
+    font-size: 17.5px;
+}
+
+#keyword {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#btn-reset {
+    background-color: firebrick;
+
+}
+
+#btn-submit {
+    background-color: forestgreen;
+}
